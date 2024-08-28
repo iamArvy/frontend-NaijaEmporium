@@ -19,4 +19,15 @@ defineProps({
 h2{
     text-transform: uppercase;
 }
+li{
+  text-transform: capitalize;
+}
+ul{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+a{
+  color: var(--light-black);
+}
 </style>

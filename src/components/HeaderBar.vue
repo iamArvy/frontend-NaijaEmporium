@@ -1,9 +1,16 @@
-<script setup>
+<script setup lang=ts>
 import { RouterLink } from 'vue-router'
+import { useRouter } from 'vue-router';
+import SearchBar from './SearchBar.vue';
+const router = useRouter();
+
+const search = (query: string) => {
+  router.push({ path: '/brands', query: { search_query: query } });
+};
 </script>
 <template>
   <header>
-    <div class="container">
+    <section>
       <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="30" height="30" />
       <nav>
         <div id="shop-list">
@@ -23,15 +30,12 @@ import { RouterLink } from 'vue-router'
         <RouterLink>New Arrivals</RouterLink>
         <RouterLink>Brand</RouterLink>
       </nav>
-      <div class="search">
-        <i class="bx bx-search"></i>
-        <input type="search" placeholder="Search..." />
-      </div>
+      <SearchBar />
       <div class="user-options">
         <RouterLink><i class="bx bx-user-circle"></i></RouterLink>
         <RouterLink><i class="bx bx-cart-alt"></i></RouterLink>
       </div>
-    </div>
+    </section>
   </header>
 </template>
 <style scoped>
@@ -44,8 +48,10 @@ header {
   font-size: 16px;
   z-index: 999999;
   background: white;
+  display: flex;
+  place-items: center;
 }
-.container {
+section {
   display: flex;
   place-items: center center;
   justify-content: space-between;
@@ -73,23 +79,6 @@ nav {
 }
 a {
   color: black;
-}
-.search {
-  background-color: #f0f0f0;
-  border-radius: 62px;
-  padding: 12px 16px;
-  height: 48px;
-  width: 577px;
-  display: flex;
-  place-items: center;
-}
-.search > input {
-  /* flex: 1 1 1; */
-  background-color: transparent;
-  border: none;
-  /* height: 100%; */
-  width: 100%;
-  outline: none;
 }
 .user-options i {
   font-size: 24px;

@@ -19,7 +19,8 @@ defineProps({
 </template>
 <style scoped>
 section {
-  padding: 3rem 0;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 ul {
   width: 100%;

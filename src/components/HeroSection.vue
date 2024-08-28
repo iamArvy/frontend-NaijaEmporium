@@ -40,7 +40,7 @@ img {
 }
 section {
   background-color: #f2f0f1;
-  padding: 2rem 0 0rem 0;
+  padding-top: 2rem;
 }
 article {
   padding: 2rem 0;

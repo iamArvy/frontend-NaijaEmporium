@@ -1,12 +1,15 @@
-<script setup></script>
+<script setup>
+import Rating from './TestingRating.vue'
+const rating = 3.5
+</script>
 <template>
-  <router-link>
+  <router-link to="/">
     <figure>
       <img src="@/assets/product.jpg" alt="" />
     </figure>
     <figcaption>
       <h2>T-shirt with Tape and Details</h2>
-      <Stars rating="50" />
+      <span><Rating :rating="rating" /><span>{{ rating }}</span>/5</span>
       <div class="price">
         <h3>$240</h3>
         <div class="discount">

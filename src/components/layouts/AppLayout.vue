@@ -8,25 +8,7 @@
 <script setup>
 import HeaderBar from '../HeaderBar.vue'
 import FooterBar from '../FooterBar.vue'
-// import NewHeader from './Partials/NewHeader.vue';
-// import { Head } from '@inertiajs/vue3';
-
-// defineProps({
-//     title: String,
-// })
 </script>
-
-<!-- <style>
-main {
-  background-color: var(--bodybg);
-  color: var(--bodytext);
-  /* height: 100vh; */
-}
-main {
-  position: relative;
-  margin-top: var(--headerheight);
-}
-</style> -->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 :root {
@@ -36,7 +18,13 @@ main {
   --heading: #101357;
   --subheading: #00ff00;
   --headerbg: #101357;
-  --bodytext: #333333;
+  --discount: rgba(255, 51, 51);
+  --discount-bg: rgba(255, 51, 51, 0.1);
+  --lighter-black: rgba(0, 0, 0, 0.4);
+  --stars: #FFC633;
+  --grey: #F0F0F0;
+  --light-black: rgba(0, 0, 0, 0.6);
+  --black:rgba(0, 0, 0);
   --buttonbg: #fbaf08;
   --bodybg: #fffff0;
   --herotext: #ffbf00;
@@ -47,6 +35,15 @@ main {
   padding: 0;
   box-sizing: border-box;
   font-family: Poppins, sans-serif;
+}
+section{
+  width: 100%;
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+p{
+  color: var(--light-black);
 }
 a {
   text-decoration: none;
@@ -80,33 +77,8 @@ main {
   color: var(--bodytext);
   /* height: 100vh; */
 }
-main,
-.full-width {
-  --padding-inline: 6rem;
-  --content-max-width: 1280px;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* overflow-y: auto; */
-  display: grid;
-  grid-template-columns:
-    [full-width-start] minmax(var(--padding-inline), 1fr) [content-start] min(
-      100% - (var(--padding-inline) * 2),
-      var(--content-max-width)
-    )
-    [content-end] minmax(var(--padding-inline), 1fr) [full-width-end];
-  /* grid-template-rows: repeat(1fr) ; */
-  /* row-gap: 2rem; */
-}
-main > *:not(.full-width),
-.full-width > *:not(.full-width) {
-  grid-column: content;
-}
-main > .full-width {
-  grid-column: full-width;
-  /* display: grid; */
-}
 main {
-  position: relative;
+  /* position: relative; */
   margin-top: var(--headerheight);
 }
 </style>
